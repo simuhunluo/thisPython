@@ -18,6 +18,5 @@ pre_ele = pd.DataFrame(pre, columns=['pre_avg'])
 real_ele = pd.DataFrame(y_test)
 after = pd.concat([pre_ele, real_ele], axis=1)
 after['error'] = abs(after['AVG_ELE'] - after['pre_avg']) / after['pre_avg']
-error = after['error'].sum() / after['error'].shape[0]
-error = round(error, 4)
-print error
+error_count=after[after['error']<0.05].shape[0]
+print error_count
