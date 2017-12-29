@@ -1,5 +1,5 @@
 # -*-encoding=utf-8-*-
-import xgboost as xgb
+import myxgboost as xgb
 import pandas as pd
 
 test_data = pd.read_csv("K:\datadig222\datadig4\lesson2\\test.csv")
